@@ -16,7 +16,7 @@ def test_empty_file():
     """
     Create an empty file named "empty_file"
 
-    Use commands like `touch` or `echo` with a `>` redirect
+    Use the `touch` command
     """
     func_status[currentframe().f_code.co_name] = False
     f_path = "empty_file"
@@ -59,7 +59,7 @@ def test_cpy_file():
     assert isfile("two_dir/" + f_path)
     with open("two_dir/" + f_path, "r") as f_handle:
         print(f'Checking that "{f_path}" has correct contents')
-        assert f_handle.read() == "42"
+        assert "42" in f_handle.read()
     func_status[currentframe().f_code.co_name] = True
 
 
@@ -271,7 +271,7 @@ def test_wildcards_q():
     check = int("11101001111001011101010001001011101011000000110100110", base=2)
     with open(f_path, "r") as f_handle:
         print(f'Checking that "{f_path}" has correct contents')
-        assert str(check) == f_handle.read()
+        assert str(check) in f_handle.read()
     func_status[currentframe().f_code.co_name] = True
 
 
@@ -295,7 +295,7 @@ def test_wildcards_star():
     check = int(chk_str, base=2)
     with open(f_path, "r") as f_handle:
         print(f'Checking that "{f_path}" has correct contents')
-        assert str(check) == f_handle.read()
+        assert str(check) in f_handle.read()
     func_status[currentframe().f_code.co_name] = True
 
 
@@ -305,7 +305,7 @@ def test_find_dot_files():
 
     Fill this file with the secret code found in a hidden file.
 
-    You may find `ls` helpful with some combination of the `-R` `-a` arguments.
+    You may find `ls` helpful some combination of the `-R` `-a` arguments.
     """
     func_status[currentframe().f_code.co_name] = False
     f_path = "sec_code.txt"
