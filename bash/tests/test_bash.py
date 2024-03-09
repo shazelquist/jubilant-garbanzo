@@ -122,6 +122,76 @@ def test_rename_spaces_file_names_are_annoying():
     func_status[currentframe().f_code.co_name] = True
 
 
+def test_update_gitignore():
+    """
+    Update `../.gitignore` so that git ignores the `func_status.json` file
+
+    Use `git status` to see if has correctly ignored this json file.
+
+    Hint:
+        While you could use any method you wish to update this file,
+        we can use a special redirect `>>` to append this file without affecting
+        the previous contents.
+    """
+    func_status[currentframe().f_code.co_name] = False
+    f_path = "../.gitignore"
+    print(f'Checking existence of "{f_path}"')
+    ignore_file = "func_status.json"
+    assert isfile(f_path)
+    with open(f_path, "r") as f_handle:
+        print(f'Checking that "{f_path}" contains {ignore_file}')
+        assert ignore_file in f_handle.read()
+    func_status[currentframe().f_code.co_name] = True
+
+
+def test_file_perms_r():
+    """
+    Change the permissions of the `my_diary` file in `two_dir`
+    so that it can not be read.
+
+    Check file permissions of a file with `ls -o`
+    Use the `chmod` command to complete this task.
+
+    Hint:
+        chmod can change the permissions for several groups.
+        In general the parameters look like this
+        `chmod {group_if_any, u,g,o,blank}{+ to add, - to remove}{read/write/execute}`
+    """
+    func_status[currentframe().f_code.co_name] = False
+    f_path = "two_dir/my_diary"
+    print(f'Checking existence of "{f_path}"')
+    assert isfile(f_path)
+    print(f'Checking that "{f_path}" has correct read permissions')
+    with pytest.raises(PermissionError):
+        with open(f_path, "r") as f_handle:
+            print(f_handle.read())
+    func_status[currentframe().f_code.co_name] = True
+
+
+def test_file_perms_w():
+    """
+    Change the permissions of the `cookie_jar` file in `two_dir`
+    so that it can not be written to.
+
+    Check file permissions of a file with `ls -o`
+    Use the `chmod` command to complete this task.
+
+    Hint:
+        chmod can change the permissions for several groups.
+        In general the parameters look like this
+        `chmod {group_if_any, u,g,o,blank}{+ to add, - to remove}{read/write/execute}`
+    """
+    func_status[currentframe().f_code.co_name] = False
+    f_path = "two_dir/cookie_jar"
+    print(f'Checking existence of "{f_path}"')
+    assert isfile(f_path)
+    print(f'Checking that "{f_path}" has correct read permissions')
+    with pytest.raises(PermissionError):
+        with open(f_path, "a") as f_handle:
+            f_handle.write("- 1 cookie\n")
+    func_status[currentframe().f_code.co_name] = True
+
+
 def test_three_dir():
     """
     Create a directory `three_dir` in education/bash
