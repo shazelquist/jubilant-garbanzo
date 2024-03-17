@@ -194,7 +194,7 @@ def test_file_perms_w():
 
 def test_three_dir():
     """
-    Create a directory `three_dir` in education/bash
+    Create a directory `three_dir` in the `bash` directory
 
     Use the `mkdir` command
     """
