@@ -70,7 +70,7 @@ def test_move_file():
     Use the `mv` command
     """
     func_status[currentframe().f_code.co_name] = False
-    f_path = "yourself"
+    f_path = "yourself.txt"
     print(f'Checking existence of "lost_dir/{f_path}"')
     assert not isfile("lost_dir/" + f_path)
     print(f'Checking existence of "found_dir/{f_path}"')
