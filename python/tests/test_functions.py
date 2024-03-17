@@ -1,6 +1,6 @@
 #!../env/bin/python3
 import pytest
-from debug_functions import *
+from functions import *
 
 
 def test_sum_of_previous_ints():

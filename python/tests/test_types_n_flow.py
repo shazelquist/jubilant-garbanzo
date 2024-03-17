@@ -1,6 +1,6 @@
 #!../env/bin/python3
 import pytest
-from debug_types_n_flow import *
+from types_n_flow import *
 
 
 def test_convert_to_binary():

@@ -1,6 +1,6 @@
 #!../env/bin/python3
 import pytest
-from debug_classes import *
+from classes import *
 
 
 def test_addition_value():
