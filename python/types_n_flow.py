@@ -6,6 +6,18 @@ This file contains some weird examples that you need to debug
 import pytest
 
 
+def convert_to_float(value):
+    """Convert some value to a floating point"""
+    # TODO
+    return
+
+
+def is_odd_or_mul_of_ten(value: int):
+    """Test if the given integer is odd or a multiple of ten, returns a boolean"""
+    # TODO
+    return
+
+
 def convert_to_binary(decimal):
     """Convert a number base 10 to base 2 and return it"""
     # TODO
@@ -30,6 +42,17 @@ def get_pn_sum(iterable):
     pos_sum, neg_sum = 0, 0
 
     return pos_sum, neg_sum
+
+
+def one_operation_string_calculator(command):
+    """
+    Given a string of the form 'number operation number', calculate and return the result
+    Example:
+        one_operation_string_calculator('2 + 3') returns the value 6
+    Must be able to handle the following operators [+, -, *, %, /, //, <, !=]
+    """
+    # TODO
+    return
 
 
 def main():
