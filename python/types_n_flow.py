@@ -19,13 +19,13 @@ def is_odd_or_mul_of_ten(value: int):
 
 
 def convert_to_binary(decimal):
-    """Convert a number base 10 to base 2 and return it"""
+    """Convert a number base 10 to base 2 and return it, the return value should be a string"""
     # TODO
     return
 
 
 def convert_to_decimal(binary):
-    """Convert a number base 2 to base 10 and return it1"""
+    """Convert a number base 2 to base 10 and return it"""
     # TODO
     return
 

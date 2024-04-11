@@ -26,9 +26,9 @@ def test_is_odd_or_mul_of_ten():
 
 
 def test_convert_to_binary():
-    assert 11 == convert_to_binary(3)
-    assert 100 == convert_to_binary(8)
-    assert 101 == convert_to_binary(9)
+    assert "11" == convert_to_binary(3)
+    assert "100" == convert_to_binary(8)
+    assert "101" == convert_to_binary(9)
 
 
 def test_convert_to_decimal():

@@ -62,3 +62,15 @@ def test_get_squareroot():
     wn_b = Weird_number(0)
     assert wn_a.get_squareroot() == Weird_number(2)
     assert wn_b.get_squareroot() == Weird_number(0.0)
+
+
+def test_shift():
+    wn_a = Weird_number(4.0)
+    wn_b = Weird_number(1.11)
+    wn_b = Weird_number(0.0)
+    assert wn_a.data == 4.0
+    wn_a.shift(1)
+    assert wn_a.data == 40.0
+    assert wn_b.data == 1.11
+    assert None == wn_b.shift(55)
+    assert wn_b.data == 610.5

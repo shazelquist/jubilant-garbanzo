@@ -6,12 +6,20 @@ This file contains some weird examples that you need to debug
 import pytest
 from totally_normal_module import totally_normal_decorator
 
+
+# TODO: create a function named `has_substring`
+# It should take two arguments: list of strings and a substring
+# This function should return true if any of the strings in the first argument contain the second argument.
+
 # TODO: without removing or edditing the above import, clean up this module's output
 
 
 @totally_normal_decorator
 def sum_of_previous_ints(value: int):
-    """Recursively calculates the sum of N_i + N_i-1 + ... N_0"""
+    """
+    Recursively calculates the sum of N_i + N_i-1 + ... N_0
+    (Recursion is where you have some function that calls itself as part of the computation)
+    """
     # TODO
     if value == 0:
         return 0
@@ -39,7 +47,7 @@ def min_max(arg):
 
 def get_lambda(power):
     """Returns a lambda that returns the count of a given character in text to a given power"""
-    # TODO: edit the lambda to satisfy the contition
+    # TODO: edit the lambda to satisfy the condition
     return lambda character, text: character + text
 
 

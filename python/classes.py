@@ -55,6 +55,9 @@ class Weird_number:
         """Returns Wn == other Wn"""
         return self.data == other.data
 
+    # TODO: Add a method called `shift` that takes an integer argument
+    # This method mutates Weird number by 10 times that integer and has no return value
+
 
 def main():
     # CLASSES
