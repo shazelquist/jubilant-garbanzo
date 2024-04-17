@@ -10,19 +10,19 @@ def test_convert_to_float():
 
 
 def test_is_odd_or_mul_of_ten():
-    assert is_odd_or_mul_of_ten(0)
-    assert is_odd_or_mul_of_ten(1)
-    assert is_odd_or_mul_of_ten(5)
-    assert is_odd_or_mul_of_ten(10)
-    assert is_odd_or_mul_of_ten(40)
-    assert is_odd_or_mul_of_ten(-710)
-    assert is_odd_or_mul_of_ten(-711)
-    assert is_odd_or_mul_of_ten(33)
-    assert not is_odd_or_mul_of_ten(22)
-    assert not is_odd_or_mul_of_ten(2)
-    assert not is_odd_or_mul_of_ten(-8)
-    assert not is_odd_or_mul_of_ten(64)
-    assert not is_odd_or_mul_of_ten(2002)
+    assert True == is_odd_or_mul_of_ten(0)
+    assert True == is_odd_or_mul_of_ten(1)
+    assert True == is_odd_or_mul_of_ten(5)
+    assert True == is_odd_or_mul_of_ten(10)
+    assert True == is_odd_or_mul_of_ten(40)
+    assert True == is_odd_or_mul_of_ten(-710)
+    assert True == is_odd_or_mul_of_ten(-711)
+    assert True == is_odd_or_mul_of_ten(33)
+    assert False == is_odd_or_mul_of_ten(22)
+    assert False == is_odd_or_mul_of_ten(2)
+    assert False == is_odd_or_mul_of_ten(-8)
+    assert False == is_odd_or_mul_of_ten(64)
+    assert False == is_odd_or_mul_of_ten(2002)
 
 
 def test_convert_to_binary():
